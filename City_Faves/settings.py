@@ -117,5 +117,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-os.environ['YELP'] = '9s1pYZ_UzjC88uQgHSZzvPB0B62XcFbfpmup4POMeZVH3QBHI8PrRxCFvWx-M3Ni8Y24InEO49b2UF3lS7Ba0nQW0chYLF7XfdCyCVZpLPAbhALaBU8YQW_6tobKXnYx'
+os.environ['YELP'] = 
 YELP_API_KEY = os.environ.get('YELP')
