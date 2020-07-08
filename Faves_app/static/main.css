@@ -1,0 +1,129 @@
+body{
+    background-image: url('../static/pics/city1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: rgba(228, 238, 241, 0.849);
+    text-shadow: 0 0 3px lightblue;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#others{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+}
+#others:hover{
+    color: red;
+}
+
+span{
+    color: red;
+}
+
+@media only screen and (min-width: 576px){
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    footer{
+        color: whitesmoke;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}
+
+#kevin{
+    color: white;
+}
+
+#kevin:hover{
+    color: red;
+}
+
+.cityList{
+    background-color: rgba(119, 110, 110, 0.699);
+    border-radius: 5px;
+    border: 2px solid rgba(245, 245, 245, 0.692);
+    min-height: 300px;
+    max-height: 500px;
+}
+
+#cityTitle{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+    font-weight: normal;
+}
+
+#yelpTitle{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+    font-weight: normal;
+}
+
+.nav-link{
+    margin: 10px;
+}
+
+.yelp{
+    min-height: 300px;
+    max-height: 600px;
+    background-color: rgba(119, 110, 110, 0.699);
+    border-radius: 5px;
+    border: 2px solid rgba(245, 245, 245, 0.692);
+    overflow-y: auto;
+}
+
+.scroll{
+    overflow-y: auto;
+
+}
+
+.home{
+    background-color: rgba(245, 245, 245, 0.815);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.citytab{
+    background-color: rgba(119, 189, 235, 0.678);
+    padding: 5px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-weight: normal;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.cityScroll{
+    max-height: 400px;
+    overflow-y: auto;
+}

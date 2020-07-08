@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' href='../static/citydetail.css'>
+    <title>{{city.name}}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style= "background-color:rgba(58, 53, 53, 0.877)">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-5">
+            <h1 class="col-sm-11">My {{city.name}} <span>Faves</span></h1>
+        </div>
+        <div class="offset-6 collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/main/{{user.id}}">Home <span class="sr-only">(current)</span></a>
+                <li> </li>
+                <a class="nav-item nav-link" href="/newcity/{{user.id}}">Manage Cities</a>
+                <li> </li>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-1 manageLikes mt-3">
+                <h3 class='divTitle'> Your Faves for {{city.name}}</h3>
+                <table class="table table-dark">
+                    <thead>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                    {% for fave in city_likes %}
+                    <tr>
+                        <td>{{fave.name}}</td>
+                        <td><a href="/removeFave/{{fave.id}}/{{city.id}}"><button class="btn btn-outline-danger btn-sm">Remove</button></a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5 offset-1 search mt-3">
+                <h3 class='divTitle'> Search for New Faves</h3>
+                <form action="/search/{{city.id}}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group mt-4">
+                        <input type="text" name='value' placeholder="ex: Food, hiking, shopping" class="form-control">
+                    </div>
+                    <button class=" col-sm-12 btn btn-dark"> Search {{city.name}} </button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-11 offset-1 results mt-3">
+                <h3 class="divTitle">Search results</h3>
+                <table class="table table-dark scroll">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Fave This?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for business in businesses %}
+                        <tr>
+                            <td><img src={{business.image_url}} alt={{business.name}} style="height: 100px; width: 100px;"></td>
+                            <td><a href={{business.url}} target="_blank" style="color: red;"> {{business.name}} </a></td>
+                            <td>{{business.rating}}</td>
+                            <td>{{business.phone}}</td>
+                            <td><a href="/faveIt/{{city.id}}/{{business.name}}"><button class="btn btn-info">Love it!</button></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small unique-color-dark pt-1">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="//kevinchancey.xyz" id='kevin' target="_blank">Kevin_Chancey</a>
+        </div>
+    </footer>
+</body>
+</html>

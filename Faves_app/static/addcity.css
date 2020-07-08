@@ -1,0 +1,121 @@
+body{
+    background-image: url('../static/pics/city2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: rgba(228, 238, 241, 0.849);
+    text-shadow: 0 0 3px lightblue;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+span{
+    color: red;
+}
+
+#kevin{
+    color: white;
+}
+
+#kevin:hover{
+    color: red;
+}
+
+.addCityForm{
+    background-color: rgba(119, 110, 110, 0.822);
+    border-radius: 5px;
+    border: 2px solid rgba(245, 245, 245, 0.692);
+    height: 120px;
+}
+
+.form-control{
+    background-color: rgba(199, 240, 253, 0.822);
+    /* box-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719); */
+}
+
+.form-control:focus{
+    background-color: rgba(37, 37, 37, 0.808);
+    color: whitesmoke;
+}
+
+button{
+    box-shadow: 3px 3px 4px rgba(90, 88, 88, 0.719);
+}
+
+.removeCityForm{
+    background-color: rgba(119, 110, 110, 0.699);
+    border-radius: 5px;
+    border: 2px solid rgba(245, 245, 245, 0.692);
+    max-height: 600px;
+    min-height: 350px;
+    overflow-y: auto;
+}
+
+#tableHead{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+    font-weight: normal;
+}
+
+.table-dark{
+    border-radius: 5px;
+}
+
+.city{
+    color: whitesmoke;
+}
+
+.city:hover{
+    color: red;
+}
+
+.tdata{
+    padding: 5px;
+}
+
+#manageCities{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+    font-weight: normal;
+}
+
+
+@media only screen and (min-width: 576px){
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    footer{
+        color: whitesmoke;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}

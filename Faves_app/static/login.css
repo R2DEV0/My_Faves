@@ -1,0 +1,118 @@
+body{
+    background-image: url('../static/pics/city.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Registration{
+    border-radius: 5px;
+    background-color: rgba(119, 110, 110, 0.877);
+    padding: 5px 10px 10px 10px;
+}
+
+.Login{
+    border-radius: 5px;
+    background-color: rgba(119, 110, 110, 0.877);
+    padding: 5px 10px 10px 10px;
+    max-height: 300px;
+}
+
+h1{
+    color: rgba(228, 238, 241, 0.849);
+    text-shadow: 0 0 3px lightblue;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h3{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+    font-weight: normal;
+}
+
+label{
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719);
+}
+
+span{
+    color: red;
+}
+
+.log{
+    margin-top: 3%;
+}
+
+button{
+    box-shadow: 3px 3px 4px rgba(90, 88, 88, 0.719);
+}
+
+#forgot{
+    color: rgb(224, 216, 216);
+}
+
+#forgot:hover{
+    color: red;
+}
+
+.form-control{
+    background-color: rgba(199, 240, 253, 0.712);
+    /* box-shadow: 3px 3px 4px rgba(39, 38, 38, 0.719); */
+}
+
+.form-control:focus{
+    background-color: rgba(37, 37, 37, 0.699);
+    color: whitesmoke;
+}
+
+#kevin{
+    color: white;
+}
+
+#kevin:hover{
+    color: red;
+}
+
+.validations{
+    font-weight: bold;
+    text-shadow: 0px 0px 20px white;
+}
+
+@media only screen and (min-width: 100px){
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer{
+        color: whitesmoke;
+        bottom: 0;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    footer{
+        color: whitesmoke;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(58, 53, 53, 0.877);
+    }
+}
+
